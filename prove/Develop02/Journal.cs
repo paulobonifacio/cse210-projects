@@ -34,9 +34,9 @@ public class Journal
                 string date = parts[0];
                 string prompt = parts[1];
                 string response = parts[2];
-                Console.WriteLine($"Date: {date}");
                 Console.WriteLine($"Prompt: {prompt}");
                 Console.WriteLine($"{response}");
+                Console.WriteLine($"Date: {date}");
                 Console.WriteLine();
             }
         }
@@ -72,7 +72,6 @@ public class Journal
             }
         }
     }
-
     internal void WriteNewEntry()
     {
         throw new NotImplementedException();

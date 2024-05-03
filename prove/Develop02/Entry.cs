@@ -11,7 +11,6 @@ public class Entry
         DateTime theCurrentTime = DateTime.Now;
         _date = theCurrentTime.ToShortDateString();
     }
-
     public void GeneratePrompt()
     {
         List<string> prompts = new List<string>()
@@ -34,7 +33,6 @@ public class Entry
         _prompt = prompts[randomIndex];
         Console.WriteLine(_prompt);
     }
-
     public void GetResponse()
     {
         Console.Write("> ");
