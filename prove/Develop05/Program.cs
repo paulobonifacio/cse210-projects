@@ -6,12 +6,15 @@ class Program
     {
         string menuSelected = "";
 
+        // Create an instance of GoalsTracker to manage goals
         GoalsTracker goals = new GoalsTracker();
 
+    // Main loop to display menu and process user input
     while (menuSelected != "6") {
 
         int points = goals.GetAccumulatedPoints();
 
+        // Display the current accumulated points
         Console.WriteLine($"You have {points} points.");
         Console.WriteLine();
         Console.WriteLine("Menu Options:");
@@ -23,11 +26,14 @@ class Program
         Console.WriteLine("  6. Quit");
         Console.Write("Select a choice from the menu: ");
 
+        // Read user input for menu selection
         menuSelected = Console.ReadLine();
 
+        // Handle the selected menu option
         switch (menuSelected) {
             case "1":
 
+                // Submenu to select the type of goal to create
                 Console.WriteLine("The Types of Goals are: ");
                 Console.WriteLine("  1. Simple Goal");
                 Console.WriteLine("  2. Eternal Goal");
@@ -35,6 +41,7 @@ class Program
                 Console.Write("Which type of goal would you like to create? ");
                 string goalType = Console.ReadLine();
 
+                // Handle the selected goal type
                 switch (goalType) {
                     case "1":
                         SimpleGoal newSimpleGoal = new SimpleGoal();
